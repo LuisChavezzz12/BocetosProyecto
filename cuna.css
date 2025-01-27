@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a7aa1;
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+
+  .search-bar img {
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .icon-container img {
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-gallery {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .image-gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .product-info {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+
+  .product-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .price {
+    font-size: 24px;
+    color: #28a745;
+  }
+
+  .old-price {
+    font-size: 18px;
+    color: #888;
+    text-decoration: line-through;
+  }
+
+  .stock {
+    margin: 10px 0;
+    color: #dc3545;
+  }
+
+  .product-description h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .product-description p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+  }
+
+  .buy-buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #3670ad;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .buy-buttons button:hover {
+    background: #769fca;
+  }
+
+  @media (max-width: 768px) {
+    .image-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-gallery img {
+      max-width: 150px;
+    }
+  }

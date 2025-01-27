@@ -1,0 +1,247 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #E5F4FF; /* Azul pastel de fondo */
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #A7C9FF, #6FAEFF); /* Degradado de azul pastel */
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  justify-content: space-between; /* Asegura que los elementos estén distribuidos */
+}
+
+header img {
+  height: 60px; /* Tamaño del logo */
+  border-radius: 50%; /* Hacer el logo redondo */
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: rotate(360deg); /* Animación de rotación en el logo */
+}
+
+header .title {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 22px;
+}
+
+.header-icons a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-icons a:hover {
+  color: #80BFFF; /* Azul más claro */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6FAEFF;
+  font-family: 'Verdana', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.real-time-image {
+  text-align: center;
+  margin-bottom: 10px; /* Ajuste de margen para que el texto quede arriba */
+  animation: zoomIn 1s ease-out;
+}
+
+.real-time-image p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6FAEFF;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.real-time-image img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.real-time-image img:hover {
+  transform: scale(1.05); /* Animación de zoom en la imagen */
+}
+
+.sensor-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.sensor-data div {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+  background-color: #F1F8FF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sensor-data div:hover {
+  transform: translateY(-5px); /* Animación de elevación de los bloques de sensor */
+}
+
+.sensor-data h3 {
+  color: #6FAEFF;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  background: linear-gradient(135deg, #A7C9FF, #6FAEFF);
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.action-buttons button:hover {
+  background-color: #80BFFF;
+  transform: translateY(-5px); /* Animación de elevación del botón */
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #F1F8FF;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+}
+
+footer .footer-names {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+footer .footer-names div {
+  padding: 10px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-names span {
+  font-size: 14px;
+  font-family: 'Verdana', sans-serif;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0.95);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header .title {
+      font-size: 18px;
+      margin-bottom: 10px;
+  }
+
+  .sensor-data {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  footer .footer-names {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+      padding: 40px;
+  }
+
+  header {
+      padding: 20px 40px;
+  }
+
+  footer {
+      padding: 20px;
+  }
+}
