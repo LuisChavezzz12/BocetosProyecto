@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BabyStore Producto</title>
   <link rel="stylesheet" href="cuna.css">
-  
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -37,15 +39,41 @@
         <p class="stock">🔴 Stock bajo (5 unidades)</p>
         <div class="product-description">
           <h2>Descripción del producto</h2>
-          <p>La cuna ofrece un motor que se puede manipular desde un teléfono móvil, además de altavoces y luces LED para relajar al bebé.</p>
+          <p>La cuna ofrece un motor que se puede manipular desde un teléfono móvil, además de altavoces y luces LED
+            para relajar al bebé.</p>
         </div>
         <div class="buy-buttons">
           <button>Comprar ahora</button>
-          <button>Agregar al carrito</button>
+          <button>Agregar al carrito</button><br><br>
+        </div>
+        <div class="monitoring">
+          <h2>Monitorear cuna</h2>
+          <form id="monitoring-form" onsubmit="return verifyCode()">
+            <label for="monitoring-code">Ingresa el código:</label>
+            <input type="text" id="monitoring-code" placeholder="Código de monitoreo" required>
+            <button type="submit">Monitorear</button>
+          </form>
+          <p id="error-message" style="color: red; display: none;">Código incorrecto. Inténtalo de nuevo.</p>
         </div>
       </div>
     </div>
   </main>
-</body>
-</html>
 
+  <script>
+    function verifyCode() {
+      const correctCode = "12345";
+      const userCode = document.getElementById("monitoring-code").value;
+      const errorMessage = document.getElementById("error-message");
+
+      if (userCode === correctCode) {
+        window.location.href = "monitoreo.html";
+        return false;
+      } else {
+        errorMessage.style.display = "block";
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>
